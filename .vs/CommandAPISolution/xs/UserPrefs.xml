@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{BDF1E387-C9B0-4FF8-B035-BEC8D053489D}|Default">
+  <MonoDevelop.Ide.ItemProperties.src.CommandAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/CommandAPI/Controllers/CommandsController.cs">
+    <Files>
+      <File FileName="src/CommandAPI/Controllers/CommandsController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CommandAPISolution" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="CommandAPI" expanded="True">
+                <Node name="Controllers" expanded="True">
+                  <Node name="CommandsController.cs" selected="True" />
+                </Node>
+                <Node name="Data" expanded="True" />
+                <Node name="Models" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
