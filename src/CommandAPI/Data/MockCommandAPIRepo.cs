@@ -21,6 +21,11 @@ namespace CommandAPI.Data
             throw new System.NotImplementedException();
         }
 
+        public Task<Command> GetCommandByCommand(string cmdLine)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<Command> GetCommandById(int id)
         {
             throw new System.NotImplementedException();
