@@ -42,7 +42,7 @@ namespace CommandAPI.Data
 
         public async Task<Command> GetCommandByCommand(string cmdLine)
         {
-            string sql = "";
+            string sql = "select * from commands where CommandLine = @cmdLine";
             var command = await _data.LoadDataByParam<Command, dynamic>(sql, new { CommandLine = cmdLine }, _config.GetConnectionString("default"));
 
             return command;
@@ -50,10 +50,19 @@ namespace CommandAPI.Data
 
         public async Task<Command> GetCommandById(int id)
         {
-            string sql = "select from commands where Id = @id";
+            string sql = "select * from commands where Id = @id";
             var command = await _data.LoadDataByParam<Command, dynamic>(sql, new { Id = id }, _config.GetConnectionString("default"));
 
+
             return command;
+        }
+
+        public async Task<int> GetLastInsertedId()
+        {
+            string sql = "select LAST_INSERT_ID();";
+            var latestId = await _data.LoadDataId<int, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+
+            return latestId;
         }
 
         public async Task UpdateCommand(int id, Command cmd)

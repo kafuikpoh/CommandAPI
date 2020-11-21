@@ -29,6 +29,16 @@ namespace CommandAPI.Access
             }
         }
 
+        public async Task<int> LoadDataId<T, U>(string sql, U parameters, string connectionString)
+        {
+            using (IDbConnection connection = new MySqlConnection(connectionString))
+            {
+                var latestId = await connection.QueryFirstAsync<int>(sql, parameters);
+
+                return latestId;
+            }
+        }
+
         public Task SaveData<T>(string sql, T parameters, string connectionString)
         {
             using (IDbConnection connection = new MySqlConnection(connectionString))

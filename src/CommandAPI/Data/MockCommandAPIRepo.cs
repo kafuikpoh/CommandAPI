@@ -31,6 +31,11 @@ namespace CommandAPI.Data
             throw new System.NotImplementedException();
         }
 
+        public Task<int> GetLastInsertedId()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task UpdateCommand(int id, Command cmd)
         {
             throw new System.NotImplementedException();
