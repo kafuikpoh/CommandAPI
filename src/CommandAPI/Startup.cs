@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CommandAPI.Data;
 using CommandAPI.Access;
+using AutoMapper;
 
 namespace CommandAPI
 {
@@ -19,6 +20,7 @@ namespace CommandAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IDataAccess, DataAccess>();
             services.AddScoped<ICommandAPIRepo, SqlCommandAPIRepo>();
         }

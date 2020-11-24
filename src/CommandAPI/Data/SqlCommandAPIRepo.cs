@@ -1,5 +1,6 @@
 
 
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CommandAPI.Access;
@@ -22,6 +23,11 @@ namespace CommandAPI.Data
 
         public async Task CreateCommand(Command cmd)
         {
+            if (cmd == null)
+            {
+                throw new ArgumentNullException(nameof(cmd));
+            }
+
             string sql = "insert into commands (HowTo, CommandLine, Platform) values (@HowTo, @CommandLine, @Platform);";
             await _data.SaveData(sql, new { HowTo = cmd.HowTo, CommandLine = cmd.CommandLine, Platform = cmd.Platform }, _config.GetConnectionString("default"));
         }
@@ -67,6 +73,11 @@ namespace CommandAPI.Data
 
         public async Task UpdateCommand(int id, Command cmd)
         {
+            if (cmd == null)
+            {
+                throw new ArgumentNullException(nameof(cmd));
+            }
+
             string sql = "update commands set HowTo = @HowTo, CommandLine = @CommandLine, Platform = @Platform where Id = @id";
             await _data.SaveData(sql, new { Id = id, HowTo = cmd.HowTo, CommandLine = cmd.CommandLine, Platform = cmd.Platform }, _config.GetConnectionString("default"));
         }
