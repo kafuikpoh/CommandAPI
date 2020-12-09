@@ -65,6 +65,7 @@ namespace CommandAPI.Controllers
             if (lastId == justInsertedId)
             {
                 return NotFound();
+
             }
 
             var newCmd = await _repository.GetCommandById(justInsertedId);

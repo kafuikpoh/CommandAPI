@@ -8,13 +8,11 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CommandAPISolution" expanded="True">
-            <Node name="src" expanded="True">
-              <Node name="CommandAPI" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="CommandsController.cs" selected="True" />
+            <Node name="test" expanded="True">
+              <Node name="CommandAPI.Tests" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" selected="True" />
                 </Node>
-                <Node name="Data" expanded="True" />
-                <Node name="Models" expanded="True" />
               </Node>
             </Node>
           </Node>
